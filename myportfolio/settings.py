@@ -76,15 +76,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
-if 'sqlite3' in sys.modules:
-    from django.db.backends.sqlite3.base import *
-    from django.db.backends.sqlite3.base import DatabaseWrapper as SQLiteDatabaseWrapper
+# if 'sqlite3' in sys.modules:
+#     from django.db.backends.sqlite3.base import *
+#     from django.db.backends.sqlite3.base import DatabaseWrapper as SQLiteDatabaseWrapper
 
-    class DatabaseWrapper(SQLiteDatabaseWrapper):
-        def get_new_connection(self, conn_params):
-            conn = super().get_new_connection(conn_params)
-            conn.isolation_level = None
-            return conn
+#     class DatabaseWrapper(SQLiteDatabaseWrapper):
+#         def get_new_connection(self, conn_params):
+#             conn = super().get_new_connection(conn_params)
+#             conn.isolation_level = None
+#             return conn
 
 # django_heroku.settings(locals())
 
