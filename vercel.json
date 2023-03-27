@@ -10,7 +10,7 @@
     }],
     "routes":[{
         "src":"/(.*)",
-        "dest":"elevate/wsgi.py"
+        "dest":"myportfolio/wsgi.py"
     },
 {
     "src":"/static/(.*)",

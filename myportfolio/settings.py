@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-*#ds*1+$+q+i*@@0#^-um=yi*-yztmy8yc8fbv@z0%9!*3^lnu
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.vercel.app','.now.sh'
+    '*','.vercel.app','.now.sh'
 
 ]
 
@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 # if os.path.isfile(dotenv_file):
 #     dotenv.load_dotenv(dotenv_file)
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # DATABASES = {}
