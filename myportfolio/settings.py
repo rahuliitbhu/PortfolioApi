@@ -76,7 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
-if '_sqlite3' in sys.modules:
+if 'sqlite3' in sys.modules:
     from django.db.backends.sqlite3.base import *
     from django.db.backends.sqlite3.base import DatabaseWrapper as SQLiteDatabaseWrapper
 
