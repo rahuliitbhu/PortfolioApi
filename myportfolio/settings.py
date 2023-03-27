@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-*#ds*1+$+q+i*@@0#^-um=yi*-yztmy8yc8fbv@z0%9!*3^lnu
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*','.vercel.app','.now.sh','http://127.0.0.1:8000/'
+    '*','.vercel.app','.now.sh',
 
 ]
 
@@ -76,7 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
-if 'sqlite3' in sys.modules:
+if '_sqlite3' in sys.modules:
     from django.db.backends.sqlite3.base import *
     from django.db.backends.sqlite3.base import DatabaseWrapper as SQLiteDatabaseWrapper
 
