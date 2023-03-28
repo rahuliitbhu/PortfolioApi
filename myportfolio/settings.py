@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 # import django_heroku
 # import dotenv
-# import dj_database_url
+import dj_database_url
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -93,34 +93,36 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 #     dotenv.load_dotenv(dotenv_file)
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'sqlite',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'djongo',
+        "CLIENT":{
+     'host':"mongodb://rkstore:naOPvm3kmtlz45By@ac-9dfhueu-shard-00-00.am8q47r.mongodb.net:27017,ac-9dfhueu-shard-00-01.am8q47r.mongodb.net:27017,ac-9dfhueu-shard-00-02.am8q47r.mongodb.net:27017/django?ssl=true&ssl_cert_reqs=CERT_NONE&replicaSet=atlas-b56uhd-shard-0&authSource=admin&retryWrites=true&w=majority",
+    'username':'rkstore',
+    'password':'naOPvm3kmtlz45By'
+        }
+       
+    }
+}
 
 
 
+
+#mongodb://rkstore:naOPvm3kmtlz45By@ac-9dfhueu-shard-00-00.am8q47r.mongodb.net:27017,ac-9dfhueu-shard-00-01.am8q47r.mongodb.net:27017,ac-9dfhueu-shard-00-02.am8q47r.mongodb.net:27017/django?ssl=true&replicaSet=atlas-b56uhd-shard-0&authSource=admin&retryWrites=true&w=majority
 
 
 
 # DATABASES = {}
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'] = dj_database_url.config()
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -173,3 +175,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 # options = DATABASES['default'].get('OPTIONS', {})
 # options.pop('sslmode', None)
+#naOPvm3kmtlz45By
+#mongodb+srv://rkstore:<password>@cluster0.am8q47r.mongodb.net/test
